@@ -1,0 +1,19 @@
+def get_virar_summary():
+    data = {
+        "Name": "Virar",
+        "District": "Palghar",
+        "State": "Maharashtra",
+        "Connectivity": ["Western Railway (Terminal)", "VVMC Bus Service"],
+        "Historical_Site": "Arnala Fort",
+        "Pincode": 401303
+    }
+
+    print(f"--- Quick Fact Sheet: {data['Name']} ---")
+    for key, value in data.items():
+        if isinstance(value, list):
+            print(f"{key:18}: {', '.join(value)}")
+        else:
+            print(f"{key:18}: {value}")
+
+if __name__ == "__main__":
+    get_virar_summary()
